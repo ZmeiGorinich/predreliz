@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                             Map<String, Object> data = new HashMap<>();
                             data.put("name", "Kaban");
                             data.put("country", "ukraine");
-                            db.collection("cities").document(user_id).set(data);
+                            db.collection("driver").document(user_id).set(data);
 
                             //DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers").child(user_id);
                             //current_user_db.setValue(true);
