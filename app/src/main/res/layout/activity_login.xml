@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#303030"
+    tools:context="com.romarinichgmail.predreliz.LoginActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:text="CARGO+"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:id="@+id/email"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="146dp"
+        android:background="#55000000"
+        android:padding="16dp"
+        android:hint="Логин"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textColorHint="#ffffff" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:id="@+id/password"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="#55000000"
+        android:hint="Пароль"
+        android:padding="16dp"
+        android:textColor="#fff"
+        android:textColorHint="#ffffff"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/gradient_1"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Войти" />
+
+    <Button
+        android:id="@+id/registration"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/gradient_1"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="Регистрация"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
