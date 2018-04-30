@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -31,6 +32,8 @@ public class FragmentOrder extends Fragment {
     ArrayList<Order> orderArrayList;
     RecyclerViewAdapter adapter;
     View v;
+    private FirebaseAuth mAuth;
+    private String userID;
 
 
     public FragmentOrder() {
@@ -54,6 +57,8 @@ public class FragmentOrder extends Fragment {
         super.onCreate(savedInstanceState);
         db = FirebaseFirestore.getInstance();
         orderArrayList= new ArrayList<>();
+        mAuth = FirebaseAuth.getInstance();
+        userID = mAuth.getCurrentUser().getUid();
         loadDataFormFirebase();
     }
 

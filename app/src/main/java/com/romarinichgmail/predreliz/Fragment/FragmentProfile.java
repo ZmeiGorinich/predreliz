@@ -1,6 +1,7 @@
 package com.romarinichgmail.predreliz.Fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -19,7 +20,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.romarinichgmail.predreliz.R;
 
 
-
 public class FragmentProfile extends Fragment{
 
     private TextView pName;
@@ -32,7 +32,6 @@ public class FragmentProfile extends Fragment{
     private String mProfileImageUrl;
 
     private ImageView mProfileImage;
-
     private String userID;
 
     private FirebaseAuth mAuth;
@@ -53,16 +52,31 @@ public class FragmentProfile extends Fragment{
         pAddress = (TextView) v.findViewById(R.id.pAddress);
         pRating = (TextView) v.findViewById(R.id.pRating);
         pPhone = (TextView) v.findViewById(R.id.pPhone);
+        mProfileImage=(ImageView)v.findViewById(R.id.profileImage);
+
+        mProfileImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(intent, 1);
+            }
+        });
+
+
+
         mAuth = FirebaseAuth.getInstance();
         userID = mAuth.getCurrentUser().getUid();
         loadDataFormFirebase();
 
-        mProfileImage = (ImageView) v.findViewById(R.id.profileImage);
+
 
         return v;
 
 
     }
+
+
 
 
 
@@ -104,6 +118,9 @@ public class FragmentProfile extends Fragment{
             }
         });
     }
+
+
+
 
 
 }

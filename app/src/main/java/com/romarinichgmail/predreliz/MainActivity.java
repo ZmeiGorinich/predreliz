@@ -10,7 +10,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.romarinichgmail.predreliz.Fragment.FragmentMap;
@@ -72,9 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         new FragmentProfile()).commit();
                 setTitle("Мой профиль");
                 break;
-            case R.id.nav_share:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
-                break;
+
             case R.id.nav_send:
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
