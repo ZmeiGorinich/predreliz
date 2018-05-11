@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.romarinichgmail.predreliz.Fragment.FragmentOrder;
-import com.romarinichgmail.predreliz.Order;
 import com.romarinichgmail.predreliz.R;
 
 import java.util.ArrayList;
@@ -15,9 +14,9 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
     FragmentOrder mFragmentOrder;
-    ArrayList<Order> mArrayList;
+    ArrayList<OrderObject> mArrayList;
 
-    public RecyclerViewAdapter(FragmentOrder mFragmentOrder, ArrayList<Order> mArrayList) {
+    public RecyclerViewAdapter(FragmentOrder mFragmentOrder, ArrayList<OrderObject> mArrayList) {
         this.mFragmentOrder=mFragmentOrder;
         this.mArrayList = mArrayList;
     }

@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.romarinichgmail.predreliz.Messenger;
+import com.romarinichgmail.predreliz.RecyclerViewMessenger.MessengerObject;
 import com.romarinichgmail.predreliz.R;
 import com.romarinichgmail.predreliz.RecyclerViewMessenger.RecyclerViewAdapter;
 
@@ -20,7 +20,7 @@ import java.util.List;
 public class FragmentMessenger extends Fragment{
     View v;
     private RecyclerView myRecyclerView;
-    private List<Messenger> lstMessager;
+    private List<MessengerObject> lstMessager;
 
     public FragmentMessenger(){
 
@@ -42,13 +42,13 @@ public class FragmentMessenger extends Fragment{
         super.onCreate(savedInstanceState);
 
         lstMessager = new ArrayList<>();
-        lstMessager.add(new Messenger("Мостоцький","12112312", R.drawable.a1));
-        lstMessager.add(new Messenger("Мосиенко","12312312312", R.drawable.a1));
-        lstMessager.add(new Messenger("Маринич","124123123", R.drawable.a1));
-        lstMessager.add(new Messenger("Кобренко","1231231", R.drawable.a1));
-        lstMessager.add(new Messenger("Гончаренко","2131231", R.drawable.a1));
-        lstMessager.add(new Messenger("Шапран","12312", R.drawable.a1));
-        lstMessager.add(new Messenger("Ишак","123123", R.drawable.a1));
-        lstMessager.add(new Messenger("Комарь","12313", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Мостоцький","12112312", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Мосиенко","12312312312", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Маринич","124123123", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Кобренко","1231231", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Гончаренко","2131231", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Шапран","12312", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Ишак","123123", R.drawable.a1));
+        lstMessager.add(new MessengerObject("Комарь","12313", R.drawable.a1));
     }
 }

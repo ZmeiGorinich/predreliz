@@ -8,17 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.romarinichgmail.predreliz.Messenger;
 import com.romarinichgmail.predreliz.R;
 
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
     Context mContext;
-    List<Messenger> mData;
+    List<MessengerObject> mData;
 
 
-    public RecyclerViewAdapter(Context mContext, List<Messenger> mData){
+    public RecyclerViewAdapter(Context mContext, List<MessengerObject> mData){
         this.mContext = mContext;
         this.mData = mData;
     }

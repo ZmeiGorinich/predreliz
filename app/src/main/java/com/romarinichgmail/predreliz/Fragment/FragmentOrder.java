@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.romarinichgmail.predreliz.Order;
+import com.romarinichgmail.predreliz.RecyclerViewOrder.OrderObject;
 import com.romarinichgmail.predreliz.R;
 import com.romarinichgmail.predreliz.RecyclerViewOrder.RecyclerViewAdapter;
 
@@ -29,7 +29,7 @@ public class FragmentOrder extends Fragment {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     RecyclerView mRecyclerView;
-    ArrayList<Order> orderArrayList;
+    ArrayList<OrderObject> orderArrayList;
     RecyclerViewAdapter adapter;
     View v;
     private FirebaseAuth mAuth;
@@ -72,7 +72,7 @@ public class FragmentOrder extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         for (DocumentSnapshot querySnapshot: task.getResult()){
-                            Order order = new Order(
+                            OrderObject order = new OrderObject(
                                     querySnapshot.getString("start_point"),
                                     querySnapshot.getString("finish_point"),
                                     querySnapshot.getString("distanse"),

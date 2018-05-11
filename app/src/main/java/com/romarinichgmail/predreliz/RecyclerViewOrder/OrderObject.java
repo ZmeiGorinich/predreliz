@@ -1,6 +1,6 @@
-package com.romarinichgmail.predreliz;
+package com.romarinichgmail.predreliz.RecyclerViewOrder;
 
-public class Order {
+public class OrderObject {
     private String StartPoint;
     private String FinishPoint;
     private String DistanseTo;
@@ -9,11 +9,11 @@ public class Order {
     private String Prise;
 
 
-    public Order() {
+    public OrderObject() {
 
     }
 
-    public Order(String startPoint, String finishPoint,  String distanseBetween, String nameCargo) {
+    public OrderObject(String startPoint, String finishPoint, String distanseBetween, String nameCargo) {
         StartPoint = startPoint;
         FinishPoint = finishPoint;
         DistanseBetween = distanseBetween;

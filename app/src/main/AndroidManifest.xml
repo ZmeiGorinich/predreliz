@@ -34,11 +34,18 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegistrationActivity" />
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
+        <activity android:name=".firemessage.MainActivity" />
+        <activity android:name=".firemessage.ChatActivity" />
+        <activity android:name=".firemessage.SignInActivity" />
+        <activity android:name=".firemessage.SplashActivity" />
+        <activity android:name=".OrderSingleActivity" />
+        <activity android:name=".RegistrationActivity" />
 
     </application>
 

@@ -13,9 +13,9 @@ import android.view.MenuItem;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.romarinichgmail.predreliz.Fragment.FragmentMap;
-import com.romarinichgmail.predreliz.Fragment.FragmentMessenger;
 import com.romarinichgmail.predreliz.Fragment.FragmentOrder;
 import com.romarinichgmail.predreliz.Fragment.FragmentProfile;
+import com.romarinichgmail.predreliz.firemessage.fragment.PeopleFragment;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_message:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new FragmentMessenger()).commit();
+                        new PeopleFragment()).commit();
                 setTitle("Сообщения");
                 break;
             case R.id.nav_order_list:
@@ -71,11 +71,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         new FragmentProfile()).commit();
                 setTitle("Мой профиль");
                 break;
+            case R.id.nav_order_single:
+                Intent intent_o=new Intent(MainActivity.this,OrderSingleActivity.class);
+                startActivity(intent_o);
+                finish();
+                setTitle("nav_order_single");
+                break;
+
 
             case R.id.nav_send:
                 FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
+                Intent intent_p = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent_p);
                 finish();
                 break;
         }

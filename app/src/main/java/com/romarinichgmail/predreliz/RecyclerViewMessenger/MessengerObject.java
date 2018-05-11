@@ -1,16 +1,16 @@
-package com.romarinichgmail.predreliz;
+package com.romarinichgmail.predreliz.RecyclerViewMessenger;
 
-public class Messenger {
+public class MessengerObject {
     private String Name;
     private String Phone;
     private int Photo;
 
 
-    public Messenger(){
+    public MessengerObject(){
 
     }
 
-    public Messenger(String name, String phone, int photo) {
+    public MessengerObject(String name, String phone, int photo) {
         Name = name;
         Phone = phone;
         Photo = photo;

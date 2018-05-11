@@ -20,6 +20,10 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_manage"
             android:title="Мой профиль" />
+        <item
+            android:id="@+id/nav_order_single"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="nav_order_single" />
     </group>
 
 
